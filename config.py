@@ -8,10 +8,10 @@ Fully Convolutional Networks for Semantic Segmentation.
 training_options = {
     "num_class": 2,
     "image_shape": (160, 576),
-    "epochs": 30,
-    "batch_size": 20,
+    "epochs": 15,
+    "batch_size": 4,
     "keep_prob": 0.5,
-    "learning_rate": 0.001,
+    "learning_rate": 0.0001,
     "is_restore": False,
     "restore_model_path": "./runs/2017-10-18-07:55:49.851706"
 }

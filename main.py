@@ -58,7 +58,8 @@ def conv2d(input, filters, kernel_size, strides):
     :return: 2D convolution layer object
     """
     return tf.layers.conv2d(input, filters, kernel_size=kernel_size, strides=strides,
-                            padding='SAME', kernel_regularizer=tf.contrib.layers.l2_regularizer(1e-3))
+                            padding='SAME', kernel_regularizer=tf.contrib.layers.l2_regularizer(1e-3),
+                            kernel_initializer=tf.truncated_normal_initializer(stddev=0.01))
 
 def conv2d_transpose(input, filters, kernel_size, strides):
     """
@@ -71,7 +72,8 @@ def conv2d_transpose(input, filters, kernel_size, strides):
     :return: 2D convolution layer object
     """
     return tf.layers.conv2d_transpose(input, filters, kernel_size=kernel_size, strides=strides,
-                                      padding='SAME', kernel_regularizer=tf.contrib.layers.l2_regularizer(1e-3))
+                                      padding='SAME', kernel_regularizer=tf.contrib.layers.l2_regularizer(1e-3),
+                                      kernel_initializer=tf.truncated_normal_initializer(stddev=0.01))
 
 
 def layers(vgg_layer3_out, vgg_layer4_out, vgg_layer7_out, num_classes):
