@@ -138,7 +138,6 @@ def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_l
     :param learning_rate: TF Placeholder for learning rate
     :param train_writer: TF Object for logging
     """
-    # TODO: Implement function
 
     for epoch in range(0, epochs):
 
